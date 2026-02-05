@@ -19,117 +19,146 @@
         <header>
             <div class="navbar">
                 <div>
-                <a href="https://cdn.pixabay.com/photo/2022/08/02/04/46/icon-7359529_1280.png" target="_blank"><img
-                        src="icon-7359529_1280.png" alt="sorry can't reach"></a>
-                    </div>
+                    <a href="#"><img src="icon-7359529_1280.png" alt="Food Platform Logo"></a>
+                </div>
                 <div class="nav">
                     <ul>
-                        <li> <a href="home.html" target="_blank">HOME</a></li>
-                        <li><a href="about.html" target="_blank">ABOUT</a></li>
-                        <li><a href="#">CONTACT</a></li>
-                        <li><a href="socialmedia.html" target="_blank">SOCIAL PLATFORM </a></li>
-                        <li><a href="menu.html" target="_blank">MENU</a></li>
+                        <li><a href="#home">HOME</a></li>
+                        <li><a href="about.html">ABOUT</a></li>
+                        <li><a href="menu.html">MENU</a></li>
+                        <li><a href="#contact">CONTACT</a></li>
+                        <li><a href="socialmedia.html">SOCIAL</a></li>
+                        <li><a href="#" onclick="toggleCart()" class="cart-btn">🛒 CART (<span id="cart-count">0</span>)</a></li>
                     </ul>
                 </div>
             </div>
         </header>
 
         <div class="upcontainer" style="position: absolute; top: 50%; left: 50%; transform: translate(-50%,-50%);">
-
             <div class="container" style="display: flex; justify-content: space-around; gap: 8vw;">
-    
-                
-                    <div class="card">
-                       <div class="myCard">
-                           <div class="innerCard">
-                               <div class="frontSide">
-                                   <p class="title">SPECIAL OFFER</p>
-                                   <p>Hover Me</p>
-                               </div>
-                               <div class="backSide">
-                                   <p class="title">Get Free Delivery above order Rs.600</p>
-                                   <p>Leave Me</p>
-                               </div>
+                <div class="card">
+                   <div class="myCard">
+                       <div class="innerCard">
+                           <div class="frontSide">
+                               <p class="title">SPECIAL OFFER</p>
+                               <p>Hover Me</p>
+                           </div>
+                           <div class="backSide">
+                               <p class="title">Get Free Delivery above order Rs.600</p>
+                               <p>Leave Me</p>
                            </div>
                        </div>
-                    </div>
+                   </div>
+                </div>
                
-                       
-               
-               
-                       <div class="hero_wrapper" style="width: 40vw;">
-                           <h1>FOOD YOU LOVE</h1>
-                           <P>"Cooking is at once child's play and adult joy. And cooking done with care is an act of love." - Craig
-                               Claiborne</P>
-                           <!-- <span>Post</span> -->
-                           <form style="font-size: larger;" class="form_code">
-                               <input class="post_code" type="text" placeholder="Enter food please!!">
-                               <button type="button">Find Food!!</button>
-                           </form>
-                       </div>
+                <div class="hero_wrapper" style="width: 40vw;">
+                    <h1>FOOD YOU LOVE</h1>
+                    <P>"Cooking is at once child's play and adult joy. And cooking done with care is an act of love." - Craig Claiborne</P>
+                    <form style="font-size: larger;" class="form_code">
+                        <input class="post_code" type="text" placeholder="Search for delicious food..." id="search-input">
+                        <button type="button" onclick="searchFood()">Find Food!!</button>
+                    </form>
+                </div>
 
-
-                       <div class="card">
-                        <div class="myCard">
-                            <div class="innerCard">
-                                <div class="frontSide">
-                                    <p class="title">24 INTO 7 OFFER</p>
-                                    <p>Hover Me</p>
-                                </div>
-                                <div class="backSide">
-                                    <p class="title">To Get 30% OFF Use Coupon "HEYFOODIE50"</p>
-                                    <p>Leave Me</p>
-                                </div>
+                <div class="card">
+                    <div class="myCard">
+                        <div class="innerCard">
+                            <div class="frontSide">
+                                <p class="title">24/7 OFFER</p>
+                                <p>Hover Me</p>
+                            </div>
+                            <div class="backSide">
+                                <p class="title">Get 30% OFF Use Coupon "HEYFOODIE50"</p>
+                                <p>Leave Me</p>
                             </div>
                         </div>
-                     </div>
-
-
-               
-                   
-    
+                    </div>
+                </div>
             </div>
         </div>
-
-        
     </section>
-    <div class="break">
+
+    <!-- Cart Sidebar -->
+    <div id="cart-sidebar" class="cart-sidebar">
+        <div class="cart-header">
+            <h2>Your Cart</h2>
+            <button onclick="toggleCart()" class="close-cart">&times;</button>
+        </div>
+        <div id="cart-items" class="cart-items"></div>
+        <div class="cart-footer">
+            <div class="cart-total">
+                <strong>Total: ₹<span id="cart-total">0</span></strong>
+            </div>
+            <button onclick="proceedToCheckout()" class="checkout-btn">Proceed to Checkout</button>
+        </div>
     </div>
+
+    <!-- Checkout Modal -->
+    <div id="checkout-modal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeCheckout()">&times;</span>
+            <h2>Checkout</h2>
+            <form id="checkout-form">
+                <div class="form-group">
+                    <label>Full Name:</label>
+                    <input type="text" id="customer-name" required>
+                </div>
+                <div class="form-group">
+                    <label>Phone:</label>
+                    <input type="tel" id="customer-phone" required>
+                </div>
+                <div class="form-group">
+                    <label>Address:</label>
+                    <textarea id="customer-address" required></textarea>
+                </div>
+                <div class="form-group">
+                    <label>Payment Method:</label>
+                    <select id="payment-method" required>
+                        <option value="">Select Payment Method</option>
+                        <option value="cod">Cash on Delivery</option>
+                        <option value="card">Credit/Debit Card</option>
+                        <option value="upi">UPI</option>
+                    </select>
+                </div>
+                <div class="order-summary">
+                    <h3>Order Summary</h3>
+                    <div id="checkout-items"></div>
+                    <div class="total-amount">
+                        <strong>Total Amount: ₹<span id="checkout-total">0</span></strong>
+                    </div>
+                </div>
+                <button type="submit" class="place-order-btn">Place Order</button>
+            </form>
+        </div>
+    </div>
+    <div class="break"></div>
     <section class="background">
         <section class="item">
             <div class="product">
-                <span> <img
-                        src="aloo-paratha-gobi-paratha-also-known-as-potato-cauliflower-stuffed-flatbread-dish-originating-from-indian-subcontinent_466689-76172.jpg"
-                        alt="">
-                    <h2 class="product_heading">
-                        ALOO PARATHA !
-                    </h2>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequatur assumenda veritatis eum
-                        quasi
-                        exercitationem ad labore quaerat debitis consectetur, illum perspiciatis, tempora facere. Id
-                        assumenda, optio sequi nulla cum impedit?</p>
+                <span>
+                    <img src="aloo-paratha-gobi-paratha-also-known-as-potato-cauliflower-stuffed-flatbread-dish-originating-from-indian-subcontinent_466689-76172.jpg" alt="Aloo Paratha">
+                    <h2 class="product_heading">ALOO PARATHA</h2>
+                    <p>Delicious potato-stuffed flatbread served with butter and yogurt. A perfect comfort food that melts in your mouth.</p>
+                    <div class="product-price">₹120</div>
+                    <button class="add-to-cart-btn" onclick="addToCart('Aloo Paratha', 120, 'aloo-paratha-gobi-paratha-also-known-as-potato-cauliflower-stuffed-flatbread-dish-originating-from-indian-subcontinent_466689-76172.jpg')">Add to Cart</button>
                 </span>
             </div>
             <div class="product">
-                <span><img src="indian-butter-chicken-black-bowl-black-background_123827-20757.avif" alt="">
-                    <h2 class="product_heading">
-                        BUTTER CHICKEN !
-                    </h2>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequatur assumenda veritatis eum
-                        quasi
-                        exercitationem ad labore quaerat debitis consectetur, illum perspiciatis, tempora facere. Id
-                        assumenda, optio sequi nulla cum impedit?</p>
+                <span>
+                    <img src="indian-butter-chicken-black-bowl-black-background_123827-20757.avif" alt="Butter Chicken">
+                    <h2 class="product_heading">BUTTER CHICKEN</h2>
+                    <p>Rich and creamy tomato-based curry with tender chicken pieces. A classic Indian dish that's loved worldwide.</p>
+                    <div class="product-price">₹280</div>
+                    <button class="add-to-cart-btn" onclick="addToCart('Butter Chicken', 280, 'indian-butter-chicken-black-bowl-black-background_123827-20757.avif')">Add to Cart</button>
                 </span>
             </div>
             <div class="product">
-                <span><img src="indian-cuisine-bhindi-masala-wooden-surface_55610-3837.avif" alt="">
-                    <h2 class="product_heading">
-                        BHINDI MASALA !
-                    </h2>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequatur assumenda veritatis eum
-                        quasi
-                        exercitationem ad labore quaerat debitis consectetur, illum perspiciatis, tempora facere. Id
-                        assumenda, optio sequi nulla cum impedit?</p>
+                <span>
+                    <img src="indian-cuisine-bhindi-masala-wooden-surface_55610-3837.avif" alt="Bhindi Masala">
+                    <h2 class="product_heading">BHINDI MASALA</h2>
+                    <p>Spicy okra curry cooked with onions, tomatoes and aromatic spices. A healthy and flavorful vegetarian delight.</p>
+                    <div class="product-price">₹150</div>
+                    <button class="add-to-cart-btn" onclick="addToCart('Bhindi Masala', 150, 'indian-cuisine-bhindi-masala-wooden-surface_55610-3837.avif')">Add to Cart</button>
                 </span>
             </div>
         </section>
@@ -197,30 +226,7 @@
 
         </div>
     </footer>
-    <script>
-
-
-
-    window.addEventListener('scroll', function() {
-    // Get the viewport height
-    const viewportHeight = window.innerHeight;
-    
-    // Get the scroll position
-    const scrollPosition = window.scrollY;
-
-    // Check if the user has scrolled 60% of the viewport height
-    if (scrollPosition >= viewportHeight * 0.6) {
-        document.querySelector('.background').classList.add('bg-change');
-    } else {
-        document.querySelector('.background').classList.remove('bg-change');
-    }
-});
-
-
-
-
-
-    </script>
+    <script src="cart.js"></script>
 </body>
 
 </html>

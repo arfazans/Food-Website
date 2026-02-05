@@ -1,1 +1,213 @@
-<center><h1>under construction</h1></center>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Menu - Food Platform</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="normalize.css">
+    <link rel="stylesheet" href="custom.css">
+    <link rel="icon" type="image/png" href="fast-food.png">
+</head>
+<body>
+    <div class="progress"></div>
+    <header>
+        <div class="navbar">
+            <div>
+                <a href="index.html"><img src="icon-7359529_1280.png" alt="Food Platform Logo"></a>
+            </div>
+            <div class="nav">
+                <ul>
+                    <li><a href="index.html">HOME</a></li>
+                    <li><a href="about.html">ABOUT</a></li>
+                    <li><a href="menu.html" class="active">MENU</a></li>
+                    <li><a href="#contact">CONTACT</a></li>
+                    <li><a href="socialmedia.html">SOCIAL</a></li>
+                    <li><a href="#" onclick="toggleCart()" class="cart-btn">🛒 CART (<span id="cart-count">0</span>)</a></li>
+                </ul>
+            </div>
+        </div>
+    </header>
+
+    <main class="menu-page">
+        <section class="menu-hero">
+            <h1>Our Delicious Menu</h1>
+            <p>Discover our wide range of authentic and delicious dishes</p>
+        </section>
+
+        <section class="menu-categories">
+            <div class="category-filters">
+                <button class="filter-btn active" onclick="filterMenu('all')">All Items</button>
+                <button class="filter-btn" onclick="filterMenu('appetizers')">Appetizers</button>
+                <button class="filter-btn" onclick="filterMenu('mains')">Main Course</button>
+                <button class="filter-btn" onclick="filterMenu('desserts')">Desserts</button>
+                <button class="filter-btn" onclick="filterMenu('beverages')">Beverages</button>
+            </div>
+
+            <div class="menu-grid">
+                <!-- Appetizers -->
+                <div class="menu-item" data-category="appetizers">
+                    <img src="pexels-chan-walrus-958545.jpg" alt="Samosa">
+                    <div class="item-info">
+                        <h3>Crispy Samosa</h3>
+                        <p>Golden fried pastry filled with spiced potatoes and peas</p>
+                        <div class="item-price">₹80</div>
+                        <button class="add-to-cart-btn" onclick="addToCart('Crispy Samosa', 80, 'pexels-chan-walrus-958545.jpg')">Add to Cart</button>
+                    </div>
+                </div>
+
+                <div class="menu-item" data-category="appetizers">
+                    <img src="pexels-dana-tentis-725991.jpg" alt="Spring Rolls">
+                    <div class="item-info">
+                        <h3>Vegetable Spring Rolls</h3>
+                        <p>Crispy rolls filled with fresh vegetables and served with sweet chili sauce</p>
+                        <div class="item-price">₹120</div>
+                        <button class="add-to-cart-btn" onclick="addToCart('Vegetable Spring Rolls', 120, 'pexels-dana-tentis-725991.jpg')">Add to Cart</button>
+                    </div>
+                </div>
+
+                <!-- Main Course -->
+                <div class="menu-item" data-category="mains">
+                    <img src="indian-butter-chicken-black-bowl-black-background_123827-20757.avif" alt="Butter Chicken">
+                    <div class="item-info">
+                        <h3>Butter Chicken</h3>
+                        <p>Rich and creamy tomato-based curry with tender chicken pieces</p>
+                        <div class="item-price">₹280</div>
+                        <button class="add-to-cart-btn" onclick="addToCart('Butter Chicken', 280, 'indian-butter-chicken-black-bowl-black-background_123827-20757.avif')">Add to Cart</button>
+                    </div>
+                </div>
+
+                <div class="menu-item" data-category="mains">
+                    <img src="aloo-paratha-gobi-paratha-also-known-as-potato-cauliflower-stuffed-flatbread-dish-originating-from-indian-subcontinent_466689-76172.jpg" alt="Aloo Paratha">
+                    <div class="item-info">
+                        <h3>Aloo Paratha</h3>
+                        <p>Delicious potato-stuffed flatbread served with butter and yogurt</p>
+                        <div class="item-price">₹120</div>
+                        <button class="add-to-cart-btn" onclick="addToCart('Aloo Paratha', 120, 'aloo-paratha-gobi-paratha-also-known-as-potato-cauliflower-stuffed-flatbread-dish-originating-from-indian-subcontinent_466689-76172.jpg')">Add to Cart</button>
+                    </div>
+                </div>
+
+                <div class="menu-item" data-category="mains">
+                    <img src="indian-cuisine-bhindi-masala-wooden-surface_55610-3837.avif" alt="Bhindi Masala">
+                    <div class="item-info">
+                        <h3>Bhindi Masala</h3>
+                        <p>Spicy okra curry cooked with onions, tomatoes and aromatic spices</p>
+                        <div class="item-price">₹150</div>
+                        <button class="add-to-cart-btn" onclick="addToCart('Bhindi Masala', 150, 'indian-cuisine-bhindi-masala-wooden-surface_55610-3837.avif')">Add to Cart</button>
+                    </div>
+                </div>
+
+                <div class="menu-item" data-category="mains">
+                    <img src="dal-fry.jpg" alt="Dal Fry">
+                    <div class="item-info">
+                        <h3>Dal Fry</h3>
+                        <p>Traditional lentil curry tempered with cumin and spices</p>
+                        <div class="item-price">₹100</div>
+                        <button class="add-to-cart-btn" onclick="addToCart('Dal Fry', 100, 'dal-fry.jpg')">Add to Cart</button>
+                    </div>
+                </div>
+
+                <!-- Desserts -->
+                <div class="menu-item" data-category="desserts">
+                    <img src="pexels-francesco-paggiaro-1117862.jpg" alt="Gulab Jamun">
+                    <div class="item-info">
+                        <h3>Gulab Jamun</h3>
+                        <p>Soft milk dumplings soaked in rose-flavored sugar syrup</p>
+                        <div class="item-price">₹90</div>
+                        <button class="add-to-cart-btn" onclick="addToCart('Gulab Jamun', 90, 'pexels-francesco-paggiaro-1117862.jpg')">Add to Cart</button>
+                    </div>
+                </div>
+
+                <div class="menu-item" data-category="desserts">
+                    <img src="pexels-marvin-ozz-2474661.jpg" alt="Ice Cream">
+                    <div class="item-info">
+                        <h3>Kulfi Ice Cream</h3>
+                        <p>Traditional Indian ice cream with cardamom and pistachios</p>
+                        <div class="item-price">₹70</div>
+                        <button class="add-to-cart-btn" onclick="addToCart('Kulfi Ice Cream', 70, 'pexels-marvin-ozz-2474661.jpg')">Add to Cart</button>
+                    </div>
+                </div>
+
+                <!-- Beverages -->
+                <div class="menu-item" data-category="beverages">
+                    <img src="pexels-omar-mahmood-106343.jpg" alt="Mango Lassi">
+                    <div class="item-info">
+                        <h3>Mango Lassi</h3>
+                        <p>Refreshing yogurt-based drink with fresh mango pulp</p>
+                        <div class="item-price">₹60</div>
+                        <button class="add-to-cart-btn" onclick="addToCart('Mango Lassi', 60, 'pexels-omar-mahmood-106343.jpg')">Add to Cart</button>
+                    </div>
+                </div>
+
+                <div class="menu-item" data-category="beverages">
+                    <img src="pexels-prabal-pratap-singh-9609848.jpg" alt="Masala Chai">
+                    <div class="item-info">
+                        <h3>Masala Chai</h3>
+                        <p>Aromatic spiced tea brewed with milk and traditional spices</p>
+                        <div class="item-price">₹40</div>
+                        <button class="add-to-cart-btn" onclick="addToCart('Masala Chai', 40, 'pexels-prabal-pratap-singh-9609848.jpg')">Add to Cart</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Cart Sidebar -->
+    <div id="cart-sidebar" class="cart-sidebar">
+        <div class="cart-header">
+            <h2>Your Cart</h2>
+            <button onclick="toggleCart()" class="close-cart">&times;</button>
+        </div>
+        <div id="cart-items" class="cart-items"></div>
+        <div class="cart-footer">
+            <div class="cart-total">
+                <strong>Total: ₹<span id="cart-total">0</span></strong>
+            </div>
+            <button onclick="proceedToCheckout()" class="checkout-btn">Proceed to Checkout</button>
+        </div>
+    </div>
+
+    <!-- Checkout Modal -->
+    <div id="checkout-modal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeCheckout()">&times;</span>
+            <h2>Checkout</h2>
+            <form id="checkout-form">
+                <div class="form-group">
+                    <label>Full Name:</label>
+                    <input type="text" id="customer-name" required>
+                </div>
+                <div class="form-group">
+                    <label>Phone:</label>
+                    <input type="tel" id="customer-phone" required>
+                </div>
+                <div class="form-group">
+                    <label>Address:</label>
+                    <textarea id="customer-address" required></textarea>
+                </div>
+                <div class="form-group">
+                    <label>Payment Method:</label>
+                    <select id="payment-method" required>
+                        <option value="">Select Payment Method</option>
+                        <option value="cod">Cash on Delivery</option>
+                        <option value="card">Credit/Debit Card</option>
+                        <option value="upi">UPI</option>
+                    </select>
+                </div>
+                <div class="order-summary">
+                    <h3>Order Summary</h3>
+                    <div id="checkout-items"></div>
+                    <div class="total-amount">
+                        <strong>Total Amount: ₹<span id="checkout-total">0</span></strong>
+                    </div>
+                </div>
+                <button type="submit" class="place-order-btn">Place Order</button>
+            </form>
+        </div>
+    </div>
+
+    <script src="cart.js"></script>
+</body>
+</html>
