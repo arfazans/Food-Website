@@ -1,2 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Social Media - Food Platform</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="normalize.css">
+    <link rel="stylesheet" href="navbar.css">
+    <link rel="stylesheet" href="custom.css">
+    <link rel="icon" type="image/png" href="images/fast-food.png">
+</head>
+<body>
+    <div class="progress"></div>
+    <header>
+        <div class="navbar">
+            <div>
+                <a href="index.html"><img src="images/icon-7359529_1280.png" alt="Food Platform Logo"></a>
+            </div>
+            <div class="nav">
+                <ul>
+                    <li><a href="index.html">HOME</a></li>
+                    <li><a href="about.html">ABOUT</a></li>
+                    <li><a href="menu.html">MENU</a></li>
+                    <li><a href="contact.html">CONTACT</a></li>
+                    <li><a href="socialmedia.html" class="active">SOCIAL</a></li>
+                    <li><a href="#" onclick="toggleCart()" class="cart-btn">🛒 CART (<span id="cart-count">0</span>)</a></li>
+                </ul>
+            </div>
+        </div>
+    </header>
 
-<center><h1>under construction</h1></center>
+    <main class="social-page">
+        <section class="social-hero">
+            <h1>Follow Us</h1>
+            <p>Stay connected with Food Platform on social media</p>
+        </section>
+
+        <section class="social-platforms">
+            <div class="container">
+                <div class="platforms-grid">
+                    <div class="platform-card">
+                        <div class="platform-icon">📷</div>
+                        <h3>Instagram</h3>
+                        <p>Follow us for mouth-watering food photos and behind-the-scenes content</p>
+                        <a href="https://instagram.com" target="_blank" class="platform-btn">Follow @foodplatform</a>
+                        <div class="follower-count">25.2K Followers</div>
+                    </div>
+
+                    <div class="platform-card">
+                        <div class="platform-icon">🐦</div>
+                        <h3>Twitter</h3>
+                        <p>Get the latest updates, offers, and engage with our food community</p>
+                        <a href="https://twitter.com" target="_blank" class="platform-btn">Follow @foodplatform</a>
+                        <div class="follower-count">18.5K Followers</div>
+                    </div>
+
+                    <div class="platform-card">
+                        <div class="platform-icon">👥</div>
+                        <h3>Facebook</h3>
+                        <p>Join our community for exclusive deals and food discussions</p>
+                        <a href="https://facebook.com" target="_blank" class="platform-btn">Like Our Page</a>
+                        <div class="follower-count">42.1K Likes</div>
+                    </div>
+
+                    <div class="platform-card">
+                        <div class="platform-icon">📺</div>
+                        <h3>YouTube</h3>
+                        <p>Watch cooking tutorials and restaurant tours on our channel</p>
+                        <a href="https://youtube.com" target="_blank" class="platform-btn">Subscribe</a>
+                        <div class="follower-count">12.8K Subscribers</div>
+                    </div>
+
+                    <div class="platform-card">
+                        <div class="platform-icon">💼</div>
+                        <h3>LinkedIn</h3>
+                        <p>Connect with us professionally and explore career opportunities</p>
+                        <a href="https://linkedin.com" target="_blank" class="platform-btn">Connect</a>
+                        <div class="follower-count">8.3K Connections</div>
+                    </div>
+
+                    <div class="platform-card">
+                        <div class="platform-icon">🎵</div>
+                        <h3>TikTok</h3>
+                        <p>Quick recipes, food hacks, and fun cooking videos</p>
+                        <a href="https://tiktok.com" target="_blank" class="platform-btn">Follow</a>
+                        <div class="follower-count">35.7K Followers</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="social-feed">
+            <div class="container">
+                <h2>Latest Posts</h2>
+                <div class="feed-grid">
+                    <div class="feed-item">
+                        <img src="images/crispy samosa.jpg" alt="Food Post">
+                        <div class="feed-content">
+                            <h4>Crispy Samosas Fresh from Kitchen! 🔥</h4>
+                            <p>Nothing beats the taste of freshly made samosas. Order now and get them delivered hot!</p>
+                            <div class="feed-stats">
+                                <span>❤️ 1.2K</span>
+                                <span>💬 89</span>
+                                <span>🔄 234</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="feed-item">
+                        <img src="images/indian-butter-chicken-black-bowl-black-background_123827-20757.avif" alt="Food Post">
+                        <div class="feed-content">
+                            <h4>Butter Chicken Special Today! 🍛</h4>
+                            <p>Our signature butter chicken is flying off the shelves. Rich, creamy, and absolutely delicious!</p>
+                            <div class="feed-stats">
+                                <span>❤️ 2.1K</span>
+                                <span>💬 156</span>
+                                <span>🔄 445</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="feed-item">
+                        <img src="images/GulabJamun.webp" alt="Food Post">
+                        <div class="feed-content">
+                            <h4>Sweet Endings with Gulab Jamun 🍯</h4>
+                            <p>End your meal on a sweet note with our traditional gulab jamuns. Soft, sweet, and irresistible!</p>
+                            <div class="feed-stats">
+                                <span>❤️ 856</span>
+                                <span>💬 67</span>
+                                <span>🔄 123</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="feed-item">
+                        <img src="images/Mango-Lass.jpg" alt="Food Post">
+                        <div class="feed-content">
+                            <h4>Refreshing Mango Lassi 🥭</h4>
+                            <p>Beat the heat with our creamy mango lassi. Made with fresh mangoes and yogurt!</p>
+                            <div class="feed-stats">
+                                <span>❤️ 1.5K</span>
+                                <span>💬 92</span>
+                                <span>🔄 287</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="hashtags">
+            <div class="container">
+                <h2>Join the Conversation</h2>
+                <div class="hashtag-list">
+                    <span class="hashtag">#FoodPlatform</span>
+                    <span class="hashtag">#IndianFood</span>
+                    <span class="hashtag">#FoodDelivery</span>
+                    <span class="hashtag">#AuthenticFlavors</span>
+                    <span class="hashtag">#FoodLovers</span>
+                    <span class="hashtag">#DeliciousFood</span>
+                    <span class="hashtag">#OrderNow</span>
+                    <span class="hashtag">#FreshFood</span>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Cart Sidebar -->
+    <div id="cart-sidebar" class="cart-sidebar">
+        <div class="cart-header">
+            <h2>Your Cart</h2>
+            <button onclick="toggleCart()" class="close-cart">&times;</button>
+        </div>
+        <div id="cart-items" class="cart-items"></div>
+        <div class="cart-footer">
+            <div class="cart-total">
+                <strong>Total: ₹<span id="cart-total">0</span></strong>
+            </div>
+            <button onclick="proceedToCheckout()" class="checkout-btn">Proceed to Checkout</button>
+        </div>
+    </div>
+
+    <footer>
+        <div class="franchise">
+            <h2>Our Franchises</h2>
+            <br><br>
+            <h4>Delhi, Gurgaon market</h4><br>
+            <h4>Hyderabad, Minar market</h4><br>
+            <h4>Mumbai, Borivali, Matunga, Bhyandar</h4><br>
+            <h4>Chennai, Raniwada ground</h4><br>
+            <h4>Pune, Shelarwaadi, Camp</h4><br>
+            <h4>Lonavla, Rossel market</h4><br>
+            <h4>Indore, Laal masjid</h4>
+        </div>
+        <div class="famous">
+            <h2>Our Special</h2>
+            <br><br>
+            <h4>Burger With Extras</h4><br>
+            <h4>Jahapana Pizza</h4><br>
+            <h4>Lajawab Biryani</h4><br>
+            <h4>Chicken Angara</h4><br>
+            <h4>Azeej Gulab Jamun</h4><br>
+            <h4>Sahi Tukda</h4><br>
+            <h4>Chicken Korma</h4>
+        </div>
+        <div class="social">
+            <h2>Social Platforms</h2>
+            <br><br>
+            <h4>💻 <a href="https://instagram.com" target="_blank">INSTAGRAM</a></h4><br>
+            <h4>🚎 <a href="https://twitter.com" target="_blank">TWITTER</a></h4><br>
+            <h4>🏍️ <a href="https://facebook.com" target="_blank">FACEBOOK</a></h4><br>
+            <h4>🚍 <a href="https://blinkit.com" target="_blank">BLINKIT</a></h4><br>
+            <h4>🚅 <a href="https://zomato.com" target="_blank">ZOMATO</a></h4>
+        </div>
+    </footer>
+
+    <script src="cart.js"></script>
+</body>
+</html>

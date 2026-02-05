@@ -13,11 +13,15 @@ document.addEventListener('DOMContentLoaded', function() {
 });
 
 function addToCart(name, price, image) {
+    // Normalize image path to prevent double images/ prefix
+    const normalizedImage = image.startsWith('images/images/') ? image.replace('images/images/', 'images/') : 
+                           !image.startsWith('images/') ? 'images/' + image : image;
+    
     const existingItem = cart.find(item => item.name === name);
     if (existingItem) {
         existingItem.quantity += 1;
     } else {
-        cart.push({ name, price, image, quantity: 1 });
+        cart.push({ name, price, image: normalizedImage, quantity: 1 });
     }
     saveCart();
     updateCartUI();
