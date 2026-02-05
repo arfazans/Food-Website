@@ -38,21 +38,53 @@
                     <li><a href="contact.html">CONTACT</a></li>
                 </ul>
             </div>
+
+            <div class="cart-icon" id="cart-button">
+                🛒<span class="cart-count" id="cart-count">0</span>
+            </div>
         </nav>
     </header>
 
     <main class="background">
         <div class="about-section">
-            <h2>Our Story</h2>
-            <p>Founded in 2023, Food Platform began with a simple mission: to bring the authentic flavors of traditional Indian cuisine to food lovers everywhere. What started as a small family kitchen in Delhi has grown into a beloved platform for discovering and enjoying extraordinary dishes.</p>
-            <p>We believe that food is more than just sustenance; it's a way to connect with culture, family, and joy. Every recipe we share is crafted with care, using only the freshest ingredients and time-honored techniques.</p>
+            <h1 class="page-title">Our Story</h1>
+            <div class="about-row">
+                <div class="about-col">
+                    <p>Founded in 2023, Food Platform began with a simple mission: to bring the authentic flavors of traditional Indian cuisine to food lovers everywhere. What started as a small family kitchen in Delhi has grown into a beloved platform for discovering and enjoying extraordinary dishes.</p>
+                    <p>We believe that food is more than just sustenance; it's a way to connect with culture, family, and joy. Every recipe we share is crafted with care, using only the freshest ingredients and time-honored techniques.</p>
+                </div>
+                <div class="about-col">
+                    <img src="pexels-photo-1414651.jpeg" alt="Our Kitchen" class="about-image">
+                </div>
+            </div>
 
-            <br>
-            <h2>Our Mission</h2>
-            <p>Our mission is to provide an unforgettable culinary experience that celebrates the diversity and richness of global flavors. We strive for excellence in every dish we serve and every interaction we have with our community.</p>
-            <p>Whether you're craving a classic Aloo Paratha or exploring the depths of a rich Butter Chicken, we are here to ensure your food journey is nothing short of amazing.</p>
+            <h2 class="page-title">Our Mission</h2>
+            <div class="about-row" style="flex-wrap: wrap-reverse;">
+                <div class="about-col">
+                    <img src="pexels-chan-walrus-958546.jpg" alt="Our Food" class="about-image">
+                </div>
+                <div class="about-col">
+                    <p>Our mission is to provide an unforgettable culinary experience that celebrates the diversity and richness of global flavors. We strive for excellence in every dish we serve and every interaction we have with our community.</p>
+                    <p>Whether you're craving a classic Aloo Paratha or exploring the depths of a rich Butter Chicken, we are here to ensure your food journey is nothing short of amazing.</p>
+                </div>
+            </div>
         </div>
     </main>
+
+    <!-- Cart Modal -->
+    <div id="cart-modal" class="cart-modal">
+        <div class="cart-content">
+            <span id="close-cart" class="close-cart">&times;</span>
+            <h2>Your Cart</h2>
+            <div id="cart-items-list" class="cart-items-list">
+                <!-- Items will be injected here -->
+            </div>
+            <div id="cart-total" class="cart-total">
+                Total: Rs. 0
+            </div>
+            <button class="checkout-btn">Checkout Now</button>
+        </div>
+    </div>
 
     <footer>
         <div class="franchise">
@@ -84,6 +116,7 @@
             <h4>🚅 <a href="https://zomato.com" target="_blank" rel="noopener noreferrer">ZOMATO</a></h4>
         </div>
     </footer>
+    <script src="cart.js"></script>
 </body>
 
 </html>

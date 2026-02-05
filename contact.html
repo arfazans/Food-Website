@@ -38,6 +38,10 @@
                     <li><a href="contact.html">CONTACT</a></li>
                 </ul>
             </div>
+
+            <div class="cart-icon" id="cart-button">
+                🛒<span class="cart-count" id="cart-count">0</span>
+            </div>
         </nav>
     </header>
 
@@ -70,6 +74,21 @@
         </div>
     </main>
 
+    <!-- Cart Modal -->
+    <div id="cart-modal" class="cart-modal">
+        <div class="cart-content">
+            <span id="close-cart" class="close-cart">&times;</span>
+            <h2>Your Cart</h2>
+            <div id="cart-items-list" class="cart-items-list">
+                <!-- Items will be injected here -->
+            </div>
+            <div id="cart-total" class="cart-total">
+                Total: Rs. 0
+            </div>
+            <button class="checkout-btn">Checkout Now</button>
+        </div>
+    </div>
+
     <footer>
         <div class="franchise">
             <h2>Our Franchises</h2>
@@ -100,6 +119,7 @@
             <h4>🚅 <a href="https://zomato.com" target="_blank" rel="noopener noreferrer">ZOMATO</a></h4>
         </div>
     </footer>
+    <script src="cart.js"></script>
 </body>
 
 </html>

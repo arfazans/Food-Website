@@ -40,6 +40,10 @@
                         <li><a href="contact.html">CONTACT</a></li>
                     </ul>
                 </div>
+
+            <div class="cart-icon" id="cart-button">
+                🛒<span class="cart-count" id="cart-count">0</span>
+            </div>
             </nav>
         </header>
 
@@ -90,21 +94,40 @@
     <div class="break"></div>
 
     <section class="background">
+        <h2 class="page-title">Featured Delicacies</h2>
         <section class="item">
-            <div class="product">
+            <div class="product menu-item">
                 <img src="aloo-paratha-gobi-paratha-also-known-as-potato-cauliflower-stuffed-flatbread-dish-originating-from-indian-subcontinent_466689-76172.jpg" alt="Aloo Paratha">
-                <h2 class="product_heading">ALOO PARATHA !</h2>
-                <p>Delicious stuffed flatbread with spiced potato filling, served hot with butter and curd.</p>
+                <div class="menu-item-info">
+                    <h3>Aloo Paratha</h3>
+                    <p>Delicious stuffed flatbread with spiced potato filling, served hot with butter and curd.</p>
+                    <div class="menu-item-footer">
+                        <span class="menu-item-price">Rs. 120</span>
+                        <button class="add-to-cart-btn">Add to Cart</button>
+                    </div>
+                </div>
             </div>
-            <div class="product">
+            <div class="product menu-item">
                 <img src="indian-butter-chicken-black-bowl-black-background_123827-20757.avif" alt="Butter Chicken">
-                <h2 class="product_heading">BUTTER CHICKEN !</h2>
-                <p>Tender chicken cooked in a rich, creamy tomato-based gravy with a blend of aromatic spices.</p>
+                <div class="menu-item-info">
+                    <h3>Butter Chicken</h3>
+                    <p>Tender chicken cooked in a rich, creamy tomato-based gravy with a blend of aromatic spices.</p>
+                    <div class="menu-item-footer">
+                        <span class="menu-item-price">Rs. 350</span>
+                        <button class="add-to-cart-btn">Add to Cart</button>
+                    </div>
+                </div>
             </div>
-            <div class="product">
+            <div class="product menu-item">
                 <img src="indian-cuisine-bhindi-masala-wooden-surface_55610-3837.avif" alt="Bhindi Masala">
-                <h2 class="product_heading">BHINDI MASALA !</h2>
-                <p>Stir-fried okra with onions, tomatoes, and spices, a perfect vegetarian side dish.</p>
+                <div class="menu-item-info">
+                    <h3>Bhindi Masala</h3>
+                    <p>Stir-fried okra with onions, tomatoes, and spices, a perfect vegetarian side dish.</p>
+                    <div class="menu-item-footer">
+                        <span class="menu-item-price">Rs. 180</span>
+                        <button class="add-to-cart-btn">Add to Cart</button>
+                    </div>
+                </div>
             </div>
         </section>
 
@@ -114,6 +137,21 @@
             <div class="arrow2">⮚</div>
         </section>
     </section>
+
+    <!-- Cart Modal -->
+    <div id="cart-modal" class="cart-modal">
+        <div class="cart-content">
+            <span id="close-cart" class="close-cart">&times;</span>
+            <h2>Your Cart</h2>
+            <div id="cart-items-list" class="cart-items-list">
+                <!-- Items will be injected here -->
+            </div>
+            <div id="cart-total" class="cart-total">
+                Total: Rs. 0
+            </div>
+            <button class="checkout-btn">Checkout Now</button>
+        </div>
+    </div>
 
     <footer>
         <div class="franchise">
@@ -146,6 +184,7 @@
         </div>
     </footer>
 
+    <script src="cart.js"></script>
     <script>
         window.addEventListener('scroll', function() {
             const viewportHeight = window.innerHeight;

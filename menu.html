@@ -38,6 +38,10 @@
                     <li><a href="contact.html">CONTACT</a></li>
                 </ul>
             </div>
+
+            <div class="cart-icon" id="cart-button">
+                🛒<span class="cart-count" id="cart-count">0</span>
+            </div>
         </nav>
     </header>
 
@@ -45,21 +49,81 @@
         <h1 class="page-title">Our Delicious Menu</h1>
 
         <div class="menu-grid">
+            <!-- Starters -->
+            <h2 class="menu-category-title">Starters</h2>
+
             <div class="menu-item">
-                <img src="aloo-paratha-gobi-paratha-also-known-as-potato-cauliflower-stuffed-flatbread-dish-originating-from-indian-subcontinent_466689-76172.jpg" alt="Aloo Paratha">
+                <img src="pexels-marvin-ozz-2474661.jpg" alt="Crispy Samosas">
                 <div class="menu-item-info">
-                    <h3>Aloo Paratha</h3>
-                    <p>Traditional stuffed flatbread with spiced potato filling.</p>
-                    <span class="menu-item-price">Rs. 120</span>
+                    <h3>Crispy Samosas</h3>
+                    <p>Deep-fried pastry filled with spiced potatoes and peas.</p>
+                    <div class="menu-item-footer">
+                        <span class="menu-item-price">Rs. 60</span>
+                        <button class="add-to-cart-btn">Add to Cart</button>
+                    </div>
                 </div>
             </div>
+
+            <div class="menu-item">
+                <img src="exploding-burger-with-vegetables-melted-cheese-black-background-generative-ai.jpg" alt="Special Veg Burger">
+                <div class="menu-item-info">
+                    <h3>Special Veg Burger</h3>
+                    <p>Gourmet burger with extra cheese and fresh vegetables.</p>
+                    <div class="menu-item-footer">
+                        <span class="menu-item-price">Rs. 220</span>
+                        <button class="add-to-cart-btn">Add to Cart</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Main Course -->
+            <h2 class="menu-category-title">Main Course</h2>
 
             <div class="menu-item">
                 <img src="indian-butter-chicken-black-bowl-black-background_123827-20757.avif" alt="Butter Chicken">
                 <div class="menu-item-info">
                     <h3>Butter Chicken</h3>
                     <p>Creamy tomato-based gravy with tender chicken pieces.</p>
-                    <span class="menu-item-price">Rs. 350</span>
+                    <div class="menu-item-footer">
+                        <span class="menu-item-price">Rs. 350</span>
+                        <button class="add-to-cart-btn">Add to Cart</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="menu-item">
+                <img src="pexels-photo-1414651.jpeg" alt="Royal Thali">
+                <div class="menu-item-info">
+                    <h3>Royal Thali</h3>
+                    <p>A complete meal with variety of curries, dal, rice, and bread.</p>
+                    <div class="menu-item-footer">
+                        <span class="menu-item-price">Rs. 450</span>
+                        <button class="add-to-cart-btn">Add to Cart</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="menu-item">
+                <img src="aloo-paratha-gobi-paratha-also-known-as-potato-cauliflower-stuffed-flatbread-dish-originating-from-indian-subcontinent_466689-76172.jpg" alt="Aloo Paratha">
+                <div class="menu-item-info">
+                    <h3>Aloo Paratha</h3>
+                    <p>Traditional stuffed flatbread with spiced potato filling.</p>
+                    <div class="menu-item-footer">
+                        <span class="menu-item-price">Rs. 120</span>
+                        <button class="add-to-cart-btn">Add to Cart</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="menu-item">
+                <img src="dal-fry.jpg" alt="Dal Fry Tadka">
+                <div class="menu-item-info">
+                    <h3>Dal Fry Tadka</h3>
+                    <p>Yellow lentils tempered with cumin, garlic, and red chilies.</p>
+                    <div class="menu-item-footer">
+                        <span class="menu-item-price">Rs. 150</span>
+                        <button class="add-to-cart-btn">Add to Cart</button>
+                    </div>
                 </div>
             </div>
 
@@ -68,38 +132,80 @@
                 <div class="menu-item-info">
                     <h3>Bhindi Masala</h3>
                     <p>Spiced okra stir-fry with aromatic Indian spices.</p>
-                    <span class="menu-item-price">Rs. 180</span>
+                    <div class="menu-item-footer">
+                        <span class="menu-item-price">Rs. 180</span>
+                        <button class="add-to-cart-btn">Add to Cart</button>
+                    </div>
                 </div>
             </div>
 
             <div class="menu-item">
-                <img src="dal-fry.jpg" alt="Dal Fry">
+                <img src="pexels-chan-walrus-958545.jpg" alt="Grand Indian Feast">
                 <div class="menu-item-info">
-                    <h3>Dal Fry</h3>
-                    <p>Yellow lentils tempered with cumin, garlic, and chilies.</p>
-                    <span class="menu-item-price">Rs. 150</span>
+                    <h3>Grand Indian Feast</h3>
+                    <p>A lavish spread of various traditional Indian dishes.</p>
+                    <div class="menu-item-footer">
+                        <span class="menu-item-price">Rs. 899</span>
+                        <button class="add-to-cart-btn">Add to Cart</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Desserts -->
+            <h2 class="menu-category-title">Desserts</h2>
+
+            <div class="menu-item">
+                <img src="pexels-faraz-ahmad-18601877.jpg" alt="Gulab Jamun">
+                <div class="menu-item-info">
+                    <h3>Gulab Jamun</h3>
+                    <p>Soft milk-solid dumplings soaked in rose-flavored sugar syrup.</p>
+                    <div class="menu-item-footer">
+                        <span class="menu-item-price">Rs. 80</span>
+                        <button class="add-to-cart-btn">Add to Cart</button>
+                    </div>
                 </div>
             </div>
 
             <div class="menu-item">
-                <img src="exploding-burger-with-vegetables-melted-cheese-black-background-generative-ai.jpg" alt="Special Burger">
+                <img src="pexels-pixabay-326333.jpg" alt="Vanilla Ice Cream">
                 <div class="menu-item-info">
-                    <h3>Special Burger</h3>
-                    <p>Gourmet burger with extra cheese and fresh vegetables.</p>
-                    <span class="menu-item-price">Rs. 220</span>
+                    <h3>Vanilla Ice Cream</h3>
+                    <p>Classic creamy vanilla ice cream with choice of toppings.</p>
+                    <div class="menu-item-footer">
+                        <span class="menu-item-price">Rs. 100</span>
+                        <button class="add-to-cart-btn">Add to Cart</button>
+                    </div>
                 </div>
             </div>
 
             <div class="menu-item">
-                <img src="pexels-chan-walrus-958545.jpg" alt="Mixed Vegetable">
+                <img src="pexels-engin-akyurt-1435909.jpg" alt="Assorted Chocolates">
                 <div class="menu-item-info">
-                    <h3>Mixed Vegetable</h3>
-                    <p>A healthy blend of seasonal vegetables in a light curry.</p>
-                    <span class="menu-item-price">Rs. 200</span>
+                    <h3>Assorted Chocolates</h3>
+                    <p>A collection of fine handmade dark and milk chocolates.</p>
+                    <div class="menu-item-footer">
+                        <span class="menu-item-price">Rs. 250</span>
+                        <button class="add-to-cart-btn">Add to Cart</button>
+                    </div>
                 </div>
             </div>
         </div>
     </main>
+
+    <!-- Cart Modal -->
+    <div id="cart-modal" class="cart-modal">
+        <div class="cart-content">
+            <span id="close-cart" class="close-cart">&times;</span>
+            <h2>Your Cart</h2>
+            <div id="cart-items-list" class="cart-items-list">
+                <!-- Items will be injected here -->
+            </div>
+            <div id="cart-total" class="cart-total">
+                Total: Rs. 0
+            </div>
+            <button class="checkout-btn">Checkout Now</button>
+        </div>
+    </div>
 
     <footer>
         <div class="franchise">
@@ -131,6 +237,7 @@
             <h4>🚅 <a href="https://zomato.com" target="_blank" rel="noopener noreferrer">ZOMATO</a></h4>
         </div>
     </footer>
+    <script src="cart.js"></script>
 </body>
 
 </html>
