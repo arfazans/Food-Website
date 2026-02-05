@@ -11,20 +11,22 @@
     <link rel="stylesheet" href="navbar.css">
     <link rel="stylesheet" href="custom.css">
     <link rel="icon" type="image/png" href="images/fast-food.png">
+    <base href="/"> <!-- Helps with GitHub Pages path resolution -->
 </head>
 <body>
     <div class="progress"></div>
     <header>
+
         <div class="navbar">
             <div>
-                <a href="index.html"><img src="images/images/icon-7359529_1280.png" alt="Food Platform Logo"></a>
+                <a href="index.html"><img src="images/icon-7359529_1280.png" alt="Food Platform Logo"></a>
             </div>
             <div class="nav">
                 <ul>
                     <li><a href="index.html">HOME</a></li>
                     <li><a href="about.html">ABOUT</a></li>
                     <li><a href="menu.html" class="active">MENU</a></li>
-                    <li><a href="#contact">CONTACT</a></li>
+                    <li><a href="contact.html">CONTACT</a></li>
                     <li><a href="socialmedia.html">SOCIAL</a></li>
                     <li><a href="#" onclick="toggleCart()" class="cart-btn">🛒 CART (<span id="cart-count">0</span>)</a></li>
                 </ul>
@@ -34,7 +36,7 @@
 
     <main class="menu-page">
         <section class="menu-hero">
-            <h1>Our Delicious Menu</h1>
+            <h1>Our Delicious Menu is here</h1>
             <p>Discover our wide range of authentic and delicious dishes</p>
         </section>
 
@@ -50,112 +52,112 @@
             <div class="menu-grid">
                 <!-- Appetizers -->
                 <div class="menu-item" data-category="appetizers">
-                    <img src="images/images/crispy samosa.jpg" alt="Samosa">
+                    <img src="images/crispy samosa.jpg" alt="Samosa">
                     <div class="item-info">
                         <h3>Crispy Samosa</h3>
                         <p>Golden fried pastry filled with spiced potatoes and peas</p>
                         <div class="item-price">₹80</div>
-                        <button class="add-to-cart-btn" onclick="addToCart('Crispy Samosa', 80, 'images/pexels-chan-walrus-958545.jpg')">Add to Cart</button>
+                        <button class="add-to-cart-btn" onclick="addToCart('Crispy Samosa', 80, 'crispy samosa.jpg')">Add to Cart</button>
                     </div>
                 </div>
 
                 <div class="menu-item" data-category="appetizers">
-                    <img src="images/images/Vegetable-Spring-Rolls-.jpg" alt="Spring Rolls">
+                    <img src="images/Vegetable-Spring-Rolls-.jpg" alt="Spring Rolls">
                     <div class="item-info">
                         <h3>Vegetable Spring Rolls</h3>
                         <p>Crispy rolls filled with fresh vegetables and served with sweet chili sauce</p>
                         <div class="item-price">₹120</div>
-                        <button class="add-to-cart-btn" onclick="addToCart('Vegetable Spring Rolls', 120, 'images/pexels-dana-tentis-725991.jpg')">Add to Cart</button>
+                        <button class="add-to-cart-btn" onclick="addToCart('Vegetable Spring Rolls', 120, 'Vegetable-Spring-Rolls-.jpg')">Add to Cart</button>
                     </div>
                 </div>
 
                 <!-- Main Course -->
                 <div class="menu-item" data-category="mains">
-                    <img src="images/images/indian-butter-chicken-black-bowl-black-background_123827-20757.avif" alt="Butter Chicken">
+                    <img src="images/indian-butter-chicken-black-bowl-black-background_123827-20757.avif" alt="Butter Chicken">
                     <div class="item-info">
                         <h3>Butter Chicken</h3>
                         <p>Rich and creamy tomato-based curry with tender chicken pieces</p>
                         <div class="item-price">₹280</div>
-                        <button class="add-to-cart-btn" onclick="addToCart('Butter Chicken', 280, 'images/images/indian-butter-chicken-black-bowl-black-background_123827-20757.avif')">Add to Cart</button>
+                        <button class="add-to-cart-btn" onclick="addToCart('Butter Chicken', 280, 'indian-butter-chicken-black-bowl-black-background_123827-20757.avif')">Add to Cart</button>
                     </div>
                 </div>
 
                 <div class="menu-item" data-category="mains">
-                    <img src="images/images/aloo-paratha-gobi-paratha-also-known-as-potato-cauliflower-stuffed-flatbread-dish-originating-from-indian-subcontinent_466689-76172.jpg" alt="Aloo Paratha">
+                    <img src="images/aloo-paratha-gobi-paratha-also-known-as-potato-cauliflower-stuffed-flatbread-dish-originating-from-indian-subcontinent_466689-76172.jpg" alt="Aloo Paratha">
                     <div class="item-info">
                         <h3>Aloo Paratha</h3>
                         <p>Delicious potato-stuffed flatbread served with butter and yogurt</p>
                         <div class="item-price">₹120</div>
-                        <button class="add-to-cart-btn" onclick="addToCart('Aloo Paratha', 120, 'images/images/aloo-paratha-gobi-paratha-also-known-as-potato-cauliflower-stuffed-flatbread-dish-originating-from-indian-subcontinent_466689-76172.jpg')">Add to Cart</button>
+                        <button class="add-to-cart-btn" onclick="addToCart('Aloo Paratha', 120, 'aloo-paratha-gobi-paratha-also-known-as-potato-cauliflower-stuffed-flatbread-dish-originating-from-indian-subcontinent_466689-76172.jpg')">Add to Cart</button>
                     </div>
                 </div>
 
                 <div class="menu-item" data-category="mains">
-                    <img src="images/images/indian-cuisine-bhindi-masala-wooden-surface_55610-3837.avif" alt="Bhindi Masala">
+                    <img src="images/indian-cuisine-bhindi-masala-wooden-surface_55610-3837.avif" alt="Bhindi Masala">
                     <div class="item-info">
                         <h3>Bhindi Masala</h3>
                         <p>Spicy okra curry cooked with onions, tomatoes and aromatic spices</p>
                         <div class="item-price">₹150</div>
-                        <button class="add-to-cart-btn" onclick="addToCart('Bhindi Masala', 150, 'images/images/indian-cuisine-bhindi-masala-wooden-surface_55610-3837.avif')">Add to Cart</button>
+                        <button class="add-to-cart-btn" onclick="addToCart('Bhindi Masala', 150, 'indian-cuisine-bhindi-masala-wooden-surface_55610-3837.avif')">Add to Cart</button>
                     </div>
                 </div>
 
                 <div class="menu-item" data-category="mains">
-                    <img src="images/images/dal-fry.jpg" alt="Dal Fry">
+                    <img src="images/dal-fry.jpg" alt="Dal Fry">
                     <div class="item-info">
                         <h3>Dal Fry</h3>
                         <p>Traditional lentil curry tempered with cumin and spices</p>
                         <div class="item-price">₹100</div>
-                        <button class="add-to-cart-btn" onclick="addToCart('Dal Fry', 100, 'images/images/dal-fry.jpg')">Add to Cart</button>
+                        <button class="add-to-cart-btn" onclick="addToCart('Dal Fry', 100, 'dal-fry.jpg')">Add to Cart</button>
                     </div>
                 </div>
 
                 <!-- Desserts -->
                 <div class="menu-item" data-category="desserts">
-                    <img src="images/images/GulabJamun.webp" alt="Gulab Jamun">
+                    <img src="images/GulabJamun.webp" alt="Gulab Jamun">
                     <div class="item-info">
                         <h3>Gulab Jamun</h3>
                         <p>Soft milk dumplings soaked in rose-flavored sugar syrup</p>
                         <div class="item-price">₹90</div>
-                        <button class="add-to-cart-btn" onclick="addToCart('Gulab Jamun', 90, 'images/pexels-francesco-paggiaro-1117862.jpg')">Add to Cart</button>
+                        <button class="add-to-cart-btn" onclick="addToCart('Gulab Jamun', 90, 'GulabJamun.webp')">Add to Cart</button>
                     </div>
                 </div>
 
                 <div class="menu-item" data-category="desserts">
-                    <img src="images/images/kulfiIcecream.jpg" alt="Ice Cream">
+                    <img src="images/kulfiIcecream.jpg" alt="Ice Cream">
                     <div class="item-info">
                         <h3>Kulfi Ice Cream</h3>
                         <p>Traditional Indian ice cream with cardamom and pistachios</p>
                         <div class="item-price">₹70</div>
-                        <button class="add-to-cart-btn" onclick="addToCart('Kulfi Ice Cream', 70, 'images/pexels-marvin-ozz-2474661.jpg')">Add to Cart</button>
+                        <button class="add-to-cart-btn" onclick="addToCart('Kulfi Ice Cream', 70, 'kulfiIcecream.jpg')">Add to Cart</button>
                     </div>
                 </div>
 
                 <!-- Beverages -->
                 <div class="menu-item" data-category="beverages">
-                    <img src="images/images/Mango-Lass.jpg" alt="Mango Lassi">
+                    <img src="images/Mango-Lass.jpg" alt="Mango Lassi">
                     <div class="item-info">
                         <h3>Mango Lassi</h3>
                         <p>Refreshing yogurt-based drink with fresh mango pulp</p>
                         <div class="item-price">₹60</div>
-                        <button class="add-to-cart-btn" onclick="addToCart('Mango Lassi', 60, 'images/pexels-omar-mahmood-106343.jpg')">Add to Cart</button>
+                        <button class="add-to-cart-btn" onclick="addToCart('Mango Lassi', 60, 'Mango-Lass.jpg')">Add to Cart</button>
                     </div>
                 </div>
 
                 <div class="menu-item" data-category="beverages">
-                    <img src="images/pexels-prabal-pratap-singh-9609848.jpg" alt="Masala Chai">
+                    <img src="images/masala chai.webp" alt="Masala Chai">
                     <div class="item-info">
                         <h3>Masala Chai</h3>
                         <p>Aromatic spiced tea brewed with milk and traditional spices</p>
                         <div class="item-price">₹40</div>
-                        <button class="add-to-cart-btn" onclick="addToCart('Masala Chai', 40, 'images/pexels-prabal-pratap-singh-9609848.jpg')">Add to Cart</button>
+                        <button class="add-to-cart-btn" onclick="addToCart('Masala Chai', 40, 'masala chai.webp')">Add to Cart</button>
                     </div>
                 </div>
             </div>
         </section>
     </main>
 
-    <!-- Cart Sidebar -->
+    <!-- Cart Sidebar & Checkout Modal (unchanged) -->
     <div id="cart-sidebar" class="cart-sidebar">
         <div class="cart-header">
             <h2>Your Cart</h2>
@@ -170,7 +172,6 @@
         </div>
     </div>
 
-    <!-- Checkout Modal -->
     <div id="checkout-modal" class="modal">
         <div class="modal-content">
             <span class="close" onclick="closeCheckout()">&times;</span>
